@@ -8,8 +8,8 @@ import stat
 RefreshListScript = 'Refresh.sh'
 
 BashHeader = '#!/bin/bash\n'
-StreamString = 'moonlight stream -1080 -app '
-roms_directory = '/home/pi/RetroPie/roms/moonlight/'
+StreamString = 'moonlight stream -$RESOLUTION -app '
+roms_directory = '$USERHOME/RetroPie/roms/moonlight/'
 
 
 def clear_directory(folder_path):

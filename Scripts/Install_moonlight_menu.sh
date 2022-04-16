@@ -1,9 +1,12 @@
 #!/bin/bash
 
+source options.sh
+
 echo -e "\nCreating Moonlight Menu for RetroPie..."
 
-CONFIG=$(<./menu_config.txt)
-DIRECTORY=/home/pi/.emulationstation/es_systems.cfg
+
+CONFIG=$(<./Scripts/menu_config.txt)
+DIRECTORY=$USERHOME/.emulationstation/es_systems.cfg
 
 if [ -f $DIRECTORY ]
 then	

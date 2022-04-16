@@ -1,19 +1,21 @@
 #!/bin/bash
 
+source options.sh
+
 echo -e "\nCreating Refresh script in Moonlight..."
 
-if [ -d /home/pi/RetroPie/roms/moonlight ] 
+if [ -d $USERHOME/RetroPie/roms/moonlight ] 
 then
-    rm -rf /home/pi/RetroPie/roms/moonlight
+    rm -rf $USERHOME/RetroPie/roms/moonlight
 fi
 
-mkdir -p /home/pi/RetroPie/roms/moonlight
+mkdir -p $USERHOME/RetroPie/roms/moonlight
 
 chmod a+x ./Scripts/Refresh.sh
-/bin/cp ./Scripts/Refresh.sh /home/pi/RetroPie/roms/moonlight/Refresh.sh
-/bin/cp ./GenerateGamesList.py /home/pi/RetroPie/roms/moonlight/GenerateGamesList.py
+/bin/cp ./Scripts/Refresh.sh $USERHOME/RetroPie/roms/moonlight/Refresh.sh
+/bin/cp ./GenerateGamesList.py $USERHOME/RetroPie/roms/moonlight/GenerateGamesList.py
 
-chmod 777 /home/pi/RetroPie/roms/moonlight
+chmod 777 $USERHOME/RetroPie/roms/moonlight
 
 echo -e "Refresh script has been added to RetroPie\n"
 echo -e "After loading RetroPie, use the \"Refresh\" rom listed in the Moonlight system.\n"

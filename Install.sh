@@ -1,5 +1,8 @@
 #!/bin/bash
 
+source options.sh
+echo $RUNUSER
+
 echo -e "\n****************************************************************"
 echo -e "Welcome to the Moonlight Installer Script for RetroPie"
 echo -e "****************************************************************\n"
@@ -44,7 +47,7 @@ case $NUM in
         ;;
     7)
         echo -e "\nRemoving all Moonlight launch scripts..."
-        rm -rf /home/pi/RetroPie/roms/moonlight	
+        rm -rf $USERHOME/RetroPie/roms/moonlight	
         sudo bash ./Install.sh
         ;;
     8)
