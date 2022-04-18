@@ -13,7 +13,9 @@ mkdir -p $USERHOME/RetroPie/roms/moonlight
 
 chmod a+x ./Scripts/Refresh.sh
 /bin/cp ./Scripts/Refresh.sh $USERHOME/RetroPie/roms/moonlight/Refresh.sh
-/bin/cp ./GenerateGamesList.py $USERHOME/RetroPie/roms/moonlight/GenerateGamesList.py
+envsubst < ./GenerateGamesList.py > $USERHOME/RetroPie/roms/moonlight/GenerateGamesList.py
+
+
 
 chmod 777 $USERHOME/RetroPie/roms/moonlight
 
